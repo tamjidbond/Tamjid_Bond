@@ -21,6 +21,9 @@ $(document).ready(function(){
         var whatsappUrl = 'https://wa.me/' + phoneNumber + '?text=' + message;
         window.open(whatsappUrl);
       });
+      document.getElementById('myButton').addEventListener('click', function() {
+        window.location.href = 'tel:+8801949242502';
+    });
       
 
     // slide-up script
