@@ -15,8 +15,8 @@ $(document).ready(function(){
         }
     });
     document.getElementById('whatsappButton').addEventListener('click', function() {
-        var message = encodeURIComponent('Hello, Im interested to work with you.'); // Replace with your desired message
-        var phoneNumber = '01949242502'; // Replace with the recipient's phone number
+        var message = encodeURIComponent('Hello, Im interested to work with you.'); 
+        var phoneNumber = '01949242502'; 
         
         var whatsappUrl = 'https://wa.me/' + phoneNumber + '?text=' + message;
         window.open(whatsappUrl);
