@@ -237,11 +237,13 @@ section .title::after{
     font-weight: 400;
     border-radius: 6px;
     border: 2px solid transparent;
-    transition: all 0.3s ease;
+    transition: all .7s linear;
     font-weight: bold;
 }
 .home .home-content a:hover{
     color: #974EC3;
+    background: none;
+    border: 2px solid purple;
     background: none;
 }
 
@@ -286,11 +288,12 @@ section .title::after{
     margin-top: 20px;
     border-radius: 6px;
     border: 2px solid transparent;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 .about .about-content .right a:hover{
     color: #974EC3;
     background: none;
+    border: 2px solid purple;
 }
 
 
@@ -322,7 +325,7 @@ section .title::after{
     /* background: linear-gradient(70deg, #ce01c7 30%, #9d2fe2 70%); */
 }
 .services .serv-content .card .box{
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     color: white;
 }
 .services .serv-content .card:hover .box{
@@ -369,11 +372,12 @@ section .title::after{
     margin-top: 20px;
     border-radius: 6px;
     border: 2px solid transparent;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 .skills .skills-content .left a:hover{
     color: #974EC3;
     background: none;
+    border: 2px solid purple;
 }
 .skills .skills-content .right .bars{
     margin-bottom: 15px;
@@ -571,13 +575,14 @@ section .title::after{
   cursor: pointer;
   flex-wrap: nowrap;
   background: linear-gradient(270deg, rgb(113, 132, 240) 0, #974EC3 100%);
-  border: 2px solid transparent;
+  border: none;
   transition: all 0.3s ease;
 
 }
 .right form .button-area button:hover{
   color: #974EC3;
   background: none;
+  border: 2px solid purple;
 }
 /* footer section styling */
 footer{
