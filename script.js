@@ -16,7 +16,7 @@ $(document).ready(function(){
     });
     document.getElementById('whatsappButton').addEventListener('click', function() {
         var message = encodeURIComponent('Hello, Im interested to work with you.'); 
-        var phoneNumber = '01949242502'; 
+        var phoneNumber = '+8801949242502'; 
         
         var whatsappUrl = 'https://wa.me/' + phoneNumber + '?text=' + message;
         window.open(whatsappUrl);
@@ -46,14 +46,14 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Developer", "Designer", "Freelancer"],
+        strings: ["Designer..", "Freelancer..", "Developer..", "Learner.."],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Developer", "Designer", "Freelancer"],
+        strings: ["Designer..", "Freelancer..", "Developer..", "Learner.."],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
