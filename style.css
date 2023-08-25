@@ -346,6 +346,71 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 
+
+/* Projects section styling */
+#projects  .title::after{
+    content: "I Have Done";
+}
+#projects  .car  .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+#projects  .car  .card:hover{
+    background: #34273c;
+    
+}
+
+#projects  .car  .card  .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+#projects  .car   .card:hover  .box{
+    transform: scale(1.05);
+}
+#projects  .car  .card  .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+#projects  .car  .card  img{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: none;
+    border: 5px solid #974EC3;
+    transition: all 0.3s ease;
+}
+#projects  .car  .card:hover img{
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid #974EC3!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: #974EC3!important;
+}
+
 /* skills section styling */
 
 .skills .title::after{
@@ -422,6 +487,7 @@ section .title::after{
     width: 70%;
 }
 
+
 /* teams section styling */
 .teams .title::after{
     content: "who with me";
@@ -486,6 +552,7 @@ section .title::after{
 .owl-dot:hover{
     background: #974EC3!important;
 }
+
 
 /* contact section styling */
 .contact .title::after{
