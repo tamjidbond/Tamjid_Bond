@@ -397,7 +397,7 @@ section .title::after{
     height: 13px;
     width: 13px;
     margin: 0 5px;
-    outline: none!important;
+    outline: none !important;
     border-radius: 50%;
     border: 2px solid #974EC3!important;
     transition: all 0.3s ease;
@@ -469,16 +469,16 @@ section .title::after{
     height: 100%;
     left: 0;
     top: 0;
-    background: #974EC3;
+    background: linear-gradient(280deg, #974EC3 30%, rgb(223, 60, 238) 70%);
 }
 .skills-content .right .html::before{
-    width: 90%;
+    width: 95%;
 }
 .skills-content .right .css::before{
-    width: 60%;
+    width: 80%;
 }
 .skills-content .right .js::before{
-    width: 80%;
+    width: 70%;
 }
 .skills-content .right .php::before{
     width: 50%;
