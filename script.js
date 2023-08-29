@@ -103,3 +103,14 @@ $(document).ready(function(){
         }
     });
 });
+
+document.addEventListener("mousemove", function(event) {
+    var sparkles = document.createElement("div");
+    sparkles.className = "sparkles";
+    sparkles.style.top = (event.pageY - 5) + "px";
+    sparkles.style.left = (event.pageX - 5) + "px";
+    document.body.appendChild(sparkles);
+    setTimeout(function() {
+        sparkles.remove();
+    }, 500);
+});
