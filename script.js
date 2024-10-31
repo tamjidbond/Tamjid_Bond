@@ -36,7 +36,7 @@ $(document).ready(function () {
         var message = encodeURIComponent(document.getElementById('message').value);
 
         // Construct the mailto URL
-        var mailtoUrl = 'mailto:' + email + '?subject=' + subject + '&body=Hello ' + name + ',%0D%0A' + message;
+        var mailtoUrl = 'mailto:' + 'bondtamjid02@gmail.com' + '?subject=' + subject + '&body=Hello ' + name + ',%0D%0A' + message;
 
         // Open the mailto link
         window.open(mailtoUrl);
