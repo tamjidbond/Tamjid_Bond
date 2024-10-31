@@ -1,59 +1,67 @@
-document.onkeydown=function(e){
-    if(e.keyCode == 123){
+document.onkeydown = function (e) {
+    if (e.keyCode == 123) {
         return false
-    } 
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
         return false;
     }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
         return false;
     }
-    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
         return false;
     }
 }
-$(document).ready(function(){
-    $(window).scroll(function(){
+$(document).ready(function () {
+    $(window).scroll(function () {
         // sticky navbar on scroll script
-        if(this.scrollY > 20){
+        if (this.scrollY > 20) {
             $('.navbar').addClass("sticky");
-        }else{
+        } else {
             $('.navbar').removeClass("sticky");
         }
-        
+
         // scroll-up button show/hide script
-        if(this.scrollY > 500){
+        if (this.scrollY > 500) {
             $('.scroll-up-btn').addClass("show");
-        }else{
+        } else {
             $('.scroll-up-btn').removeClass("show");
         }
     });
-    document.getElementById('whatsappButton').addEventListener('click', function() {
-        var message = encodeURIComponent('Hello, Im interested to work with you.'); 
-        var phoneNumber = '+8801949242502'; 
-        
-        var whatsappUrl = 'https://wa.me/' + phoneNumber + '?text=' + message;
-        window.open(whatsappUrl);
-      });
-      document.getElementById('myButton').addEventListener('click', function() {
+    document.getElementById('mailButton').addEventListener('click', function () {
+        // Get values from the form
+        var name = encodeURIComponent(document.getElementById('name').value);
+        var email = encodeURIComponent(document.getElementById('email').value);
+        var subject = encodeURIComponent(document.getElementById('subject').value);
+        var message = encodeURIComponent(document.getElementById('message').value);
+
+        // Construct the mailto URL
+        var mailtoUrl = 'mailto:' + email + '?subject=' + subject + '&body=Hello ' + name + ',%0D%0A' + message;
+
+        // Open the mailto link
+        window.open(mailtoUrl);
+    });
+
+
+    document.getElementById('myButton').addEventListener('click', function () {
         window.location.href = 'tel:+8801949242502';
     });
-      
+
 
     // slide-up script
-    $('.scroll-up-btn').click(function(){
-        $('html').animate({scrollTop: 0});
+    $('.scroll-up-btn').click(function () {
+        $('html').animate({ scrollTop: 0 });
         // removing smooth scroll on slide-up button click
         $('html').css("scrollBehavior", "auto");
     });
 
-    $('.navbar .menu li a').click(function(){
+    $('.navbar .menu li a').click(function () {
         // applying again smooth scroll on menu items click
         $('html').css("scrollBehavior", "smooth");
     });
 
     // toggle menu/navbar script
-    $('.menu-btn').click(function(){
+    $('.menu-btn').click(function () {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
@@ -81,15 +89,15 @@ $(document).ready(function(){
         autoplayTimeOut: 2000,
         autoplayHoverPause: true,
         responsive: {
-            0:{
+            0: {
                 items: 1,
                 nav: false
             },
-            600:{
+            600: {
                 items: 2,
                 nav: false
             },
-            1000:{
+            1000: {
                 items: 3,
                 nav: false
             }
@@ -102,15 +110,15 @@ $(document).ready(function(){
         autoplayTimeOut: 2000,
         autoplayHoverPause: true,
         responsive: {
-            0:{
+            0: {
                 items: 1,
                 nav: false
             },
-            600:{
+            600: {
                 items: 2,
                 nav: false
             },
-            1000:{
+            1000: {
                 items: 3,
                 nav: false
             }
@@ -118,13 +126,13 @@ $(document).ready(function(){
     });
 });
 
-document.addEventListener("mousemove", function(event) {
+document.addEventListener("mousemove", function (event) {
     var sparkles = document.createElement("div");
     sparkles.className = "sparkles";
     sparkles.style.top = (event.pageY - 5) + "px";
     sparkles.style.left = (event.pageX - 5) + "px";
     document.body.appendChild(sparkles);
-    setTimeout(function() {
+    setTimeout(function () {
         sparkles.remove();
     }, 500);
 });
